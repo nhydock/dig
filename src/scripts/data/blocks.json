@@ -1,0 +1,82 @@
+[
+    {
+        "key": "dirt",
+        "name": "Dirt",
+        "type": "SDIRT",
+        "startsAt": 0,
+        "durability": 1,
+        "growth": 1,
+        "drops": [
+            {
+                "item": "CMDIRT",
+                "chance": 1.0,
+                "min": 1,
+                "max": 10
+            }
+        ]
+    },
+    {
+        "key": "clay",
+        "name": "Clay",
+        "type": "SDIRT",
+        "startsAt": 20,
+        "durability": 20,
+        "growth": 2
+    },
+    {
+        "key": "gravel",
+        "name": "Gravel",
+        "type": "SDIRT",
+        "startsAt": 50,
+        "durability": 100,
+        "growth": 2
+    },
+    {
+        "key": "limestone",
+        "name": "Limestone",
+        "type": "MDIRT",
+        "startsAt": 100,
+        "durability": 180,
+        "growth": 4
+    },
+    {
+        "key": "limestone",
+        "name": "Limestone",
+        "type": "MDIRT",
+        "startsAt": 180,
+        "durability": 600,
+        "growth": 5
+    },
+    {
+        "key": "sandstone",
+        "name": "Sandstone",
+        "type": "MDIRT",
+        "startsAt": 300,
+        "durability": 4000,
+        "growth": 8
+    },
+    {
+        "key": "marble",
+        "name": "Marble",
+        "type": "HDIRT",
+        "startsAt": 1000,
+        "durability": 30000,
+        "growth": 10
+    },
+    {
+        "key": "granite",
+        "name": "Granite",
+        "type": "HDIRT",
+        "startsAt": 5000,
+        "durability": 60000,
+        "growth": 15
+    },
+    {
+        "key": "bedrock",
+        "name": "Bedrock",
+        "type": "BDROCK",
+        "startsAt": 15000,
+        "durability": 250000,
+        "growth": 25
+    }
+]

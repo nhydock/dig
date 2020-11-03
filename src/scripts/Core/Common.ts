@@ -43,6 +43,25 @@ export enum Orientation {
   WEST
 }
 
+export interface Point {
+  x: number,
+  y: number,
+}
+
+export function OrientationOf(a: Point, b: Point) {
+  let orient: Orientation = Orientation.SOUTH;
+  if (a.x < b.x) {
+    orient = Orientation.WEST;
+  }
+  if (a.x > b.x) {
+    orient = Orientation.EAST;
+  }
+  if (a.y < b.y) {
+    orient = Orientation.NORTH;
+  }
+  return orient;
+} 
+
 export interface CostFunction {
   (baseCost: number, level: number): number;
 }

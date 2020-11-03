@@ -1,11 +1,7 @@
 import { ItemChance, ProduceListenerFunc } from "./ItemChance";
-import { ItemsInventory } from "./ItemsInventory";
-import { Listener } from "./Listener";
 
 export class ItemsFactory {
   constructor(private itemsInventory: ItemsInventory) {}
-
-  produceListeners = new Listener();
 
   items = this.itemsInventory.Items;
   itemMap = [
@@ -47,6 +43,18 @@ export class ItemsFactory {
     []
   ];
 
+  rollForItems(): ItemPrize | null {
+    const c = Math.random();
+    if (c > this.chance) return null;
+
+    let a = Math.random();
+    a = Math.round(a * this.diff + this.minAmount);
+
+    log("Produced " + a + ' items of type "' + this.item.Name + '"');
+
+    return { item: this.item, amount: a };
+  }
+
   produceItems(type: number) {
     type -= 1; // Type/array offset
 
@@ -60,9 +68,5 @@ export class ItemsFactory {
         result.item.addMany(result.amount);
       }
     }
-  }
-
-  addProduceListener(func: ProduceListenerFunc) {
-    return this.produceListeners.add(func);
   }
 }
